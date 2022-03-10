@@ -9,6 +9,7 @@ TagManager:
   - boost
   - PortalA
   - PortalB
+  - Morte
   layers:
   - Default
   - TransparentFX

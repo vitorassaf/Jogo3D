@@ -13,6 +13,7 @@ public class movimentobola : MonoBehaviour
     public bool CheckBoost;
     public float tempo;
     public Transform destino;
+    public Transform spawn;
 
     public KeyCode ParaFrente;
     public KeyCode ParaTras;
@@ -123,7 +124,10 @@ public class movimentobola : MonoBehaviour
         {
             CheckBoost = true;
         }
-
+        if (other.tag == "Morte")
+        {
+            transform.position = spawn.transform.position;
+        }
         
     }
 
