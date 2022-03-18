@@ -3,6 +3,12 @@ using UnityEngine.UI;
 
 public class HelicopterController : MonoBehaviour
 {
+    [Header("Lanterna")]
+    public GameObject LanternaHeli;
+    public KeyCode HabilitaLanternaHeli;
+    bool LanternaHabilitadoHeli = false;
+
+    [Header("Heli")]
     public AudioSource HelicopterSound;
     public ControlPanel ControlPanel;
     public Rigidbody HelicopterModel;
@@ -44,8 +50,21 @@ public class HelicopterController : MonoBehaviour
         ControlPanel.KeyPressed += OnKeyPressed;
 	}
 
-	void Update () {
-	}
+	void Update () 
+    {
+        if (Input.GetKeyDown(HabilitaLanternaHeli))
+        {
+            LanternaHabilitadoHeli = !LanternaHabilitadoHeli;
+            if (LanternaHabilitadoHeli)
+            {
+                LanternaHeli.SetActive(true);
+            }
+            else
+            {
+                LanternaHeli.SetActive(false);
+            }
+        }
+    }
   
     void FixedUpdate()
     {

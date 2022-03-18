@@ -53,21 +53,26 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Helicopter\Scripts\Checkpoint.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\LookAtTargetController.cs" />
+    <Compile Include="Assets\Scripts\disparobala.cs" />
     <Compile Include="Assets\Scripts\Pontuacao.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\PressedKeyCode.cs" />
     <Compile Include="Assets\Scripts\movimentobola.cs" />
+    <Compile Include="Assets\Scripts\TiroController.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\HelicopterController.cs" />
+    <Compile Include="Assets\Scripts\MiraController.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\ControlPanel.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\HeliRotorController.cs" />
     <Compile Include="Assets\Scripts\movimentotesouro.cs" />
     <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
+    <Compile Include="Assets\Scripts\MiraLaser.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\FollowTargetCamera.cs" />
+    <Compile Include="Assets\Helicopter\Scripts\CheckpointController.cs" />
     <Compile Include="Assets\Scripts\movimentocamera.cs" />
     <Compile Include="Assets\Scripts\MovimentoBoost.cs" />
     <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\HeliRotorController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\Checkpoint.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\CheckpointController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\HelicopterController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\PressedKeyCode.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\LookAtTargetController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\ControlPanel.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\FollowTargetCamera.cs" />
+    <Compile Include="Assets\Scripts\CenarioController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GalaxyBox1\instructions.txt" />
