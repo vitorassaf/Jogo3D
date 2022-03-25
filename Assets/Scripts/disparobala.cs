@@ -6,6 +6,7 @@ public class disparobala : MonoBehaviour
 {
     Rigidbody forca;
     public float velocidade;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,4 +18,6 @@ public class disparobala : MonoBehaviour
     {
         forca.AddForce(transform.forward * velocidade, ForceMode.Impulse);
     }
+
+  
 }
