@@ -61,11 +61,14 @@
     <Compile Include="Assets\Scripts\disparobala.cs" />
     <Compile Include="Assets\Scripts\Pontuacao.cs" />
     <Compile Include="Assets\Helicopter\Scripts\PressedKeyCode.cs" />
+    <Compile Include="Assets\Scripts\Dano.cs" />
     <Compile Include="Assets\Scripts\movimentobola.cs" />
+    <Compile Include="Assets\inputnew\InputSystemManager.cs" />
     <Compile Include="Assets\Scripts\TiroController.cs" />
     <Compile Include="Assets\Helicopter\Scripts\HelicopterController.cs" />
     <Compile Include="Assets\Scripts\MiraController.cs" />
     <Compile Include="Assets\Helicopter\Scripts\ControlPanel.cs" />
+    <Compile Include="Assets\inputnew\newInputSystem.cs" />
     <Compile Include="Assets\Helicopter\Scripts\HeliRotorController.cs" />
     <Compile Include="Assets\Scripts\movimentotesouro.cs" />
     <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
@@ -76,11 +79,10 @@
     <Compile Include="Assets\Scripts\MovimentoBoost.cs" />
     <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
     <Compile Include="Assets\Scripts\CenarioController.cs" />
-    <Compile Include="Assets\inputnew\newInputSystem.cs" />
-    <Compile Include="Assets\inputnew\InputSystemManager.cs" />
-    <Compile Include="Assets\Scripts\Dano.cs" />
+    <Compile Include="Assets\Scripts\AviaoController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Super Spitfire\readme.txt" />
     <None Include="Assets\GalaxyBox1\instructions.txt" />
   </ItemGroup>
   <ItemGroup>
