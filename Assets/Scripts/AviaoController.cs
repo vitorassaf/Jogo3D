@@ -22,6 +22,8 @@ public class AviaoController : MonoBehaviour
     public float velocidade;
     public float fatorGiro;
 
+    public GameObject jogador;
+
 
     void Start()
     {
@@ -112,12 +114,12 @@ public class AviaoController : MonoBehaviour
             return false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+  
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.name =="Jogador")
-        {
-            collision.gameObject.SetActive(false);
-            ligado = true;
-        }
+        Debug.Log("entrou");
+        jogador.SetActive(false);
+        ligado = true;
     }
 }
