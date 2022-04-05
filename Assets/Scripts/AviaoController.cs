@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AviaoController : MonoBehaviour
 {
@@ -21,18 +22,27 @@ public class AviaoController : MonoBehaviour
     public bool ligado;
     public float velocidade;
     public float fatorGiro;
+    public Text VelocidadeHelicetxt;
+    public Text VelocidadeAviao;
 
+    [Header("Combustivel")]
+    public float gasolina;
+    private bool QueimaCombustivel;
+    private Rigidbody rig;
     public GameObject jogador;
-
+    public Text gasolinatxt;
 
     void Start()
     {
-        
+        rig = GetComponent<Rigidbody>();
     }
 
     
     void Update()
     {
+        gasolinatxt.text = "Gasolina: "       + gasolina;
+        VelocidadeAviao.text = "velocidade: " + velocidade;
+        VelocidadeHelicetxt.text = "Helice: " + velocidadeInicialHelice;
 
         if(ligado)
         {
@@ -42,7 +52,21 @@ public class AviaoController : MonoBehaviour
             }
         }
 
+        if(QueimaCombustivel)
+        {
+            Motorativado();
+        }
         
+        if(gasolina <= 0)
+        {
+            rig.useGravity = true;
+        }
+    }
+
+    private void Motorativado()
+    {
+        gasolina--;
+
         
     }
 
@@ -89,6 +113,8 @@ public class AviaoController : MonoBehaviour
             {
                 movX = -1;
             }
+
+            QueimaCombustivel = true;
         }
         
 
@@ -121,5 +147,6 @@ public class AviaoController : MonoBehaviour
         Debug.Log("entrou");
         jogador.SetActive(false);
         ligado = true;
+        rig.isKinematic = false;
     }
 }
