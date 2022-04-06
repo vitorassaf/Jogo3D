@@ -12,6 +12,7 @@ TagManager:
   - Morte
   - Destrutivo
   - bullet
+  - Alvo
   layers:
   - Default
   - TransparentFX

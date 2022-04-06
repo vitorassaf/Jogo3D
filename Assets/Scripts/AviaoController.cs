@@ -31,6 +31,11 @@ public class AviaoController : MonoBehaviour
     private Rigidbody rig;
     public GameObject jogador;
     public Text gasolinatxt;
+    public Scrollbar scrollbar;
+
+    [Header("Alvo")]
+    public int Pontuacao = 6;
+    public Text alvotxt;
 
     void Start()
     {
@@ -43,6 +48,7 @@ public class AviaoController : MonoBehaviour
         gasolinatxt.text = "Gasolina: "       + gasolina;
         VelocidadeAviao.text = "velocidade: " + velocidade;
         VelocidadeHelicetxt.text = "Helice: " + velocidadeInicialHelice;
+        alvotxt.text = "Alvos: " + Pontuacao + "/6";
 
         if(ligado)
         {
@@ -60,13 +66,15 @@ public class AviaoController : MonoBehaviour
         if(gasolina <= 0)
         {
             rig.useGravity = true;
+            gasolina = 0;
+
         }
     }
 
     private void Motorativado()
     {
         gasolina--;
-
+        scrollbar.size -= 0.001f;
         
     }
 
@@ -144,9 +152,19 @@ public class AviaoController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entrou");
-        jogador.SetActive(false);
-        ligado = true;
-        rig.isKinematic = false;
+        if (other.gameObject == jogador)
+        {
+            Debug.Log("entrou");
+            jogador.SetActive(false);
+            ligado = true;
+            rig.isKinematic = false;
+        }
+        if (other.gameObject.tag == "Alvo")
+        {
+            Destroy(other.gameObject);
+            Pontuacao--;
+
+        }
+
     }
 }

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4026562121375005188}
   - component: {fileID: 4026562121373907140}
   - component: {fileID: 4026562121368802756}
+  - component: {fileID: 1388031510}
+  - component: {fileID: 1388031509}
   m_Layer: 0
   m_Name: Alvo
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4026562121376097796}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 656.6, y: 91.6, z: 330.24}
-  m_LocalScale: {x: 12.393787, y: 15.855554, z: 7.564152}
+  m_LocalScale: {x: 15.332956, y: 15.855554, z: 10.022501}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,3 +103,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &1388031510
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026562121376097796}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1388031509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026562121376097796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8018303, y: 1.8115139, z: 0.41986766}
+  m_Center: {x: 0.016322412, y: 0.0005454189, z: 0}
