@@ -25,6 +25,9 @@ public class AviaoController : MonoBehaviour
     public Text VelocidadeHelicetxt;
     public Text VelocidadeAviao;
 
+    public Text VelocidadeHelicetxt2;
+    public Text VelocidadeAviao2;
+
     [Header("Combustivel")]
     public float gasolina;
     private bool QueimaCombustivel;
@@ -33,9 +36,13 @@ public class AviaoController : MonoBehaviour
     public Text gasolinatxt;
     public Slider Slider;
 
+    public Text gasolinatxt2;
+    public Slider Slider2;
+
     [Header("Alvo")]
     public int Pontuacao = 6;
     public Text alvotxt;
+    public Text alvotxt2;
 
     void Start()
     {
@@ -50,7 +57,12 @@ public class AviaoController : MonoBehaviour
         VelocidadeHelicetxt.text = "Helice: " + velocidadeInicialHelice;
         alvotxt.text = "Alvos: " + Pontuacao + "/6";
 
-        if(ligado)
+        gasolinatxt2.text = gasolina.ToString("F1");
+        VelocidadeAviao2.text = "velocidade: " + velocidade.ToString("F2");
+        VelocidadeHelicetxt2.text = "Helice: " + velocidadeInicialHelice;
+        alvotxt2.text = "Alvos: " + Pontuacao + "/6";
+
+        if (ligado)
         {
             if (giraHelice())
             {
@@ -77,7 +89,8 @@ public class AviaoController : MonoBehaviour
     {
         gasolina -= Time.deltaTime;
         Slider.value -= Time.deltaTime/30;
-        
+        Slider2.value -= Time.deltaTime / 30;
+
     }
 
     private void movimento()

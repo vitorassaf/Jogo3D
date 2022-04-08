@@ -7,11 +7,16 @@ public class CameraAviaoController : MonoBehaviour
     public GameObject CameraPrimeiraPessoa;
     public GameObject CameraTerceiraPessoa;
     public GameObject CameraRetrovisor;
+    public GameObject Minimapa;
+    public KeyCode mapa;
     public AviaoController aviao;
     public KeyCode PrimeiraPessoa;
     bool Habilita1P = false;
     bool habilitaRetro = false;
     public KeyCode Retrovisor;
+    public float tempoMapa;
+    private bool tempo;
+    
    
     void Start()
     {
@@ -34,6 +39,7 @@ public class CameraAviaoController : MonoBehaviour
         }
         trocaCamera();
         mostraRetrovisor();
+        HabilitaMapa();
     }
 
   
@@ -69,6 +75,28 @@ public class CameraAviaoController : MonoBehaviour
                 CameraTerceiraPessoa.GetComponent<Camera>().depth = 1;
                 CameraPrimeiraPessoa.GetComponent<Camera>().depth = 0;
             }
+        }
+    }
+
+    void HabilitaMapa()
+    {
+        if(Input.GetKeyDown(mapa))
+        {
+            Minimapa.SetActive(true);
+            tempo = true;
+
+        }
+
+        if(tempo)
+        {
+            tempoMapa += Time.deltaTime;
+        }
+
+        if(tempoMapa >= 5f)
+        {
+            Minimapa.SetActive(false);
+            tempoMapa = 0;
+            tempo = false;
         }
     }
 }
