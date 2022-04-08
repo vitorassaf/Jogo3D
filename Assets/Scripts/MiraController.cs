@@ -10,6 +10,9 @@ public class MiraController : MonoBehaviour
     [Header("Lanterna")]
     public GameObject Lanterna;
     public KeyCode HabilitaLanterna;
+    [Header("Luneta")]
+    public Camera CameraLuneta;
+    
     [Header("Entrar no Heli")]
     public GameObject Heli;
     public GameObject Heli2;
@@ -20,6 +23,7 @@ public class MiraController : MonoBehaviour
     bool LanternaHabilitado = false;
     bool LaserHabilitado = false;
     bool HeliHabilitado = false;
+    bool LunetaHabilitado = false;
 
 
     void Start()
@@ -72,5 +76,19 @@ public class MiraController : MonoBehaviour
             }
         }
 
+       
+        if(Input.GetMouseButtonDown(1))
+        {
+            LunetaHabilitado = !LunetaHabilitado;
+            if(LunetaHabilitado)
+            {
+                CameraLuneta.depth = 2;
+            }
+            else
+            {
+                CameraLuneta.depth = 0;
+            }
+            
+        }
     }
 }

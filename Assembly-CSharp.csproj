@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Helicopter\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Helicopter\Scripts\LookAtTargetController.cs" />
+    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\UIButton_ShowNext.cs" />
     <Compile Include="Assets\Scripts\disparobala.cs" />
     <Compile Include="Assets\Scripts\Pontuacao.cs" />
     <Compile Include="Assets\Helicopter\Scripts\PressedKeyCode.cs" />
@@ -75,15 +76,15 @@
     <Compile Include="Assets\Scripts\MiraLaser.cs" />
     <Compile Include="Assets\Helicopter\Scripts\FollowTargetCamera.cs" />
     <Compile Include="Assets\Scripts\AviaoController.cs" />
+    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\FreeCam.cs" />
+    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\SuperCamera.cs" />
     <Compile Include="Assets\Helicopter\Scripts\CheckpointController.cs" />
     <Compile Include="Assets\Scripts\movimentocamera.cs" />
     <Compile Include="Assets\Scripts\MovimentoBoost.cs" />
     <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
-    <Compile Include="Assets\Scripts\CenarioController.cs" />
     <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\FreeCamera.cs" />
-    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\FreeCam.cs" />
-    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\UIButton_ShowNext.cs" />
-    <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\SuperCamera.cs" />
+    <Compile Include="Assets\Scripts\CenarioController.cs" />
+    <Compile Include="Assets\Scripts\CameraAviaoController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Super Spitfire\readme.txt" />

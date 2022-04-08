@@ -5,6 +5,7 @@ public class FollowTargetCamera : MonoBehaviour
     public Transform Target;
     public float PositionFolowForce = 5f;
     public float RotationFolowForce = 5f;
+    public float fator;
 	void Start ()
 	{
 
