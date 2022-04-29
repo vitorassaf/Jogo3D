@@ -5,7 +5,8 @@ using UnityEngine;
 public class Pontuacao : MonoBehaviour
 {
     private int quantidade = 0;
-    
+
+    public static bool pegouTesouro = false;
     void Start()
     {
 
@@ -21,6 +22,7 @@ public class Pontuacao : MonoBehaviour
     {
         if(other.tag == "tesouro")
         {
+            pegouTesouro = true;
             quantidade++;
             Destroy(other.gameObject);
             print("quantidade de itens: " + quantidade);

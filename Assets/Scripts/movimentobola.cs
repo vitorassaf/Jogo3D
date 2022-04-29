@@ -15,6 +15,10 @@ public class movimentobola : MonoBehaviour
     public Transform destino;
     public Transform spawn;
 
+    public AudioClip SomPulo;
+    public AudioClip SomItem;
+    AudioSource audio2;
+
     public KeyCode ParaFrente;
     public KeyCode ParaTras;
     public KeyCode esquerda;
@@ -26,34 +30,59 @@ public class movimentobola : MonoBehaviour
     void Start()
     {
         fisica = GetComponent<Rigidbody>();
+        audio2 = GetComponent<AudioSource>();
     }
 
    
     void Update()
     {
+        if (Pontuacao.pegouTesouro)
+        {
+            
+                audio2.PlayOneShot(SomItem);
+            
+            
+            Pontuacao.pegouTesouro = false;
+        }
         #region 1 maneira de pegar o valor do jogador
         //movX = Input.GetAxis("Horizontal");
         //movZ = Input.GetAxis("Vertical");
         #endregion
 
         #region 2 maneira de pegar o valor do jogador
-        if(Input.GetKey(ParaFrente))
+        if(Input.GetKeyDown(ParaFrente))
         {
             movZ = 1;
         }
-        if (Input.GetKey(ParaTras))
+        if (Input.GetKeyUp(ParaFrente))
+        {
+            movZ = 0;
+        }
+        if (Input.GetKeyDown(ParaTras))
         {
             movZ = -1;
         }
-        if (Input.GetKey(esquerda))
+        if (Input.GetKeyUp(ParaTras))
+        {
+            movZ = 0;
+        }
+        if (Input.GetKeyDown(esquerda))
         {
             movX = -1;
         }
-        if (Input.GetKey(direita))
+        if (Input.GetKeyUp(esquerda))
+        {
+            movX = 0;
+        }
+        if (Input.GetKeyDown(direita))
         {
             movX = 1;
         }
-        
+        if (Input.GetKeyUp(direita))
+        {
+            movX = 0;
+        }
+
         #endregion
 
         Vector3 move = new Vector3(movX * Time.deltaTime,0,movZ * Time.deltaTime);
@@ -94,6 +123,13 @@ public class movimentobola : MonoBehaviour
         if (Input.GetKeyDown(pulo) && podePular)
         {
             fisica.AddForce(Vector3.up * PuloVelocidade, ForceMode.Impulse);
+
+            if (!audio2.isPlaying)
+            {
+                audio2.clip = SomPulo;
+                audio2.Play();
+            }
+           
         }
         #endregion
 

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Helicopter\Scripts\HeliRotorController.cs" />
     <Compile Include="Assets\Scripts\movimentotesouro.cs" />
     <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
+    <Compile Include="Assets\Scripts\CameraAviaoController.cs" />
     <Compile Include="Assets\Scripts\MiraLaser.cs" />
     <Compile Include="Assets\Helicopter\Scripts\FollowTargetCamera.cs" />
     <Compile Include="Assets\Scripts\AviaoController.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
     <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\FreeCamera.cs" />
     <Compile Include="Assets\Scripts\CenarioController.cs" />
-    <Compile Include="Assets\Scripts\CameraAviaoController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Super Spitfire\readme.txt" />
