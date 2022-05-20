@@ -24,6 +24,7 @@ public class AviaoController : MonoBehaviour
     public float fatorGiro;
     public Text VelocidadeHelicetxt;
     public Text VelocidadeAviao;
+   
 
     public Text VelocidadeHelicetxt2;
     public Text VelocidadeAviao2;
@@ -44,9 +45,18 @@ public class AviaoController : MonoBehaviour
     public Text alvotxt;
     public Text alvotxt2;
 
+    [Header("som")]
+    public AudioSource somaviao;
+    public AudioSource somaviao2;
+    public AudioClip iniciando;
+   
+
+    
+
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+        
     }
 
     
@@ -96,6 +106,9 @@ public class AviaoController : MonoBehaviour
     private void movimento()
     {
 
+        
+     
+        
         float movZ = 0;
         float movX = 0;
         #region aceleração
@@ -120,6 +133,7 @@ public class AviaoController : MonoBehaviour
         
         if(velocidadeInicialHelice >= 1000)
         {
+
             if (Input.GetKey(esquerda))
             {
                 movZ = 1;
@@ -173,6 +187,8 @@ public class AviaoController : MonoBehaviour
             jogador.SetActive(false);
             ligado = true;
             rig.isKinematic = false;
+            somaviao.PlayOneShot(iniciando);
+
         }
         if (other.gameObject.tag == "Alvo")
         {

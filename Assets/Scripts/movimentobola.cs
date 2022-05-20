@@ -17,6 +17,8 @@ public class movimentobola : MonoBehaviour
 
     public AudioClip SomPulo;
     public AudioClip SomItem;
+    public AudioClip Sommorte;
+    public AudioClip somboost;
     AudioSource audio2;
 
     public KeyCode ParaFrente;
@@ -159,10 +161,12 @@ public class movimentobola : MonoBehaviour
         if (other.tag == "boost")
         {
             CheckBoost = true;
+            audio2.PlayOneShot(somboost);
         }
         if (other.tag == "Morte")
         {
             transform.position = spawn.transform.position;
+            audio2.PlayOneShot(Sommorte);
         }
         
     }

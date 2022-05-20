@@ -85,6 +85,7 @@
     <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
     <Compile Include="Assets\Ciconia Studio\_Shared Files\Scripts\Demo\FreeCamera.cs" />
     <Compile Include="Assets\Scripts\CenarioController.cs" />
+    <Compile Include="Assets\Scripts\MixerSom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Super Spitfire\readme.txt" />
